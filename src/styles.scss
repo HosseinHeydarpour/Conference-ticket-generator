@@ -56,10 +56,14 @@
 }
 
 body {
-  background: url("../public/images/background-mobile.png");
+  background: url("../public/images/background-mobile.png") center center
+    no-repeat;
   font-size: 20px;
   font-family: "Inconsolata";
   font-weight: 300;
+  position: relative;
+  min-height: 100dvh;
+}
 
 .shape-1 {
   background: url("../public/images/pattern-lines.svg");
@@ -88,7 +92,6 @@ body {
 
 .shape-3 {
   background: url("../public/images/pattern-squiggly-line-top.svg");
-
   position: absolute;
   top: 20px;
   right: 0;
