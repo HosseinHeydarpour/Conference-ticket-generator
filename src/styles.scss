@@ -47,3 +47,17 @@
   src: url("../public/fonts/Inconsolata-Medium.ttf") format("truetype");
 }
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: url("../public/images/background-mobile.png");
+  font-size: 20px;
+  font-family: "Inconsolata";
+  font-weight: 300;
+}
