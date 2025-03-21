@@ -2,3 +2,8 @@
   padding: 40px;
   border: 1px solid red;
 }
+
+form {
+  z-index: 500;
+  position: relative;
+}
