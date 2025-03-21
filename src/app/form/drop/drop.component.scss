@@ -1,0 +1,30 @@
+.drop-zone {
+  border: 2px dashed var(--neutral-500);
+  padding: 20px 10px;
+  border-radius: 1rem;
+  background-color: var(--neutral-700-low-op);
+
+  backdrop-filter: blur(2px); /* Blurs background */
+  -webkit-backdrop-filter: blur(2px); /* Safari support */
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  p {
+    color: var(--neutral-300);
+    margin-bottom: 0;
+    font-size: 18px;
+  }
+
+  &__icon {
+    background-color: var(--neutral-500-low-op);
+    border: 1px solid var(--neutral-300-low-op);
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+}

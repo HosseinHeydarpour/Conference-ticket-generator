@@ -1,0 +1,14 @@
+<div
+  class="d-flex align-items-center justify-content-center h-100 drop-zone flex-column"
+>
+  <div class="drop-zone__icon">
+    <img src="/images/icon-upload.svg" alt="" />
+  </div>
+  <input
+    type="file"
+    (change)="onFileSelect($event)"
+    (dragover)="onDragOver()"
+    class="opacity-0 drop-zone__input"
+  />
+  <p>Drag and drop or click to upload</p>
+</div>

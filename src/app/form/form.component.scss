@@ -1,9 +1,17 @@
-.drop-zone {
-  padding: 40px;
-  border: 1px solid red;
+.form {
+  &__info {
+    p {
+      font-size: 12px;
+      color: var(--neutral-500);
+    }
+  }
 }
 
 form {
   z-index: 500;
   position: relative;
+}
+
+label {
+  color: var(--neutral-0);
 }

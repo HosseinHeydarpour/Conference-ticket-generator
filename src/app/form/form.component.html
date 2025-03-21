@@ -1,7 +1,10 @@
-<form action="">
+<form action="" class="form">
   <div class="form-group">
-    <div class="drop-zone">
-      <input type="file" (change)="onFileDrop($event)" />
+    <label class="mb-2">Upload Avatar</label>
+    <app-drop></app-drop>
+    <div class="d-flex gap-2 form__info align-items-center mt-3">
+      <img src="/images/icon-info.svg" alt="Exclamation mark" />
+      <p class="mb-0">Upload your photo (JPG or PNG, max size: 500KB)</p>
     </div>
   </div>
 </form>
