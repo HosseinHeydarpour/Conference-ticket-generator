@@ -10,8 +10,10 @@ import { Component } from '@angular/core';
 export class DropComponent {
   file: File | null = null;
   imagePreview: string | null = null;
+  draggedOver: boolean = false;
   onFileSelect(e: Event) {
     const target = e.target as HTMLInputElement;
+    this.draggedOver = false; // Reset the dragged-over state
 
     if (target.files && target.files.length > 0) {
       this.file = target.files[0];
@@ -32,7 +34,11 @@ export class DropComponent {
   }
 
   onDragOver() {
-    console.log('Drag Over');
+    this.draggedOver = true;
+  }
+
+  onDragLeave() {
+    this.draggedOver = false;
   }
 
   onRemoveImage() {

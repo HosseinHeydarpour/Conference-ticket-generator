@@ -1,5 +1,6 @@
 <div
   class="d-flex align-items-center justify-content-center h-100 drop-zone flex-column"
+  [class.focused]="draggedOver"
 >
   <div class="drop-zone__icon" [class.p-2]="!imagePreview">
     @if (imagePreview) {
@@ -12,6 +13,7 @@
     type="file"
     (change)="onFileSelect($event)"
     (dragover)="onDragOver()"
+    (dragleave)="onDragLeave()"
     class="opacity-0 drop-zone__input"
     accept="image/png, image/jpeg"
   />

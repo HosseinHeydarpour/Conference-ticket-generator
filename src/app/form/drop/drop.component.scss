@@ -7,7 +7,7 @@
   backdrop-filter: blur(2px); /* Blurs background */
   -webkit-backdrop-filter: blur(2px); /* Safari support */
 
-  &:focus {
+  &.focused {
     outline: solid 2px var(--neutral-500);
     outline-offset: 4px;
   }
