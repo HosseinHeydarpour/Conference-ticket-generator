@@ -9,12 +9,25 @@ import { Component } from '@angular/core';
 })
 export class DropComponent {
   file: File | null = null;
+  imagePreview: string | null = null;
   onFileSelect(e: Event) {
     const target = e.target as HTMLInputElement;
 
     if (target.files && target.files.length > 0) {
       this.file = target.files[0];
-      console.log(this.file);
+
+      const reader = new FileReader();
+
+      reader.onload = () => {
+        if (reader.result) {
+          this.imagePreview = reader.result as string;
+        }
+      };
+
+      reader.readAsDataURL(this.file);
+
+      // Reset the file input to allow selecting the same file again
+      target.value = '';
     }
   }
 

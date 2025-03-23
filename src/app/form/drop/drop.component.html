@@ -1,8 +1,12 @@
 <div
   class="d-flex align-items-center justify-content-center h-100 drop-zone flex-column"
 >
-  <div class="drop-zone__icon">
+  <div class="drop-zone__icon" [class.p-2]="!imagePreview">
+    @if (imagePreview) {
+    <img [src]="imagePreview" alt="" class="w-100 img-fluid h-100" />
+    } @else {
     <img src="/images/icon-upload.svg" alt="" />
+    }
   </div>
   <input
     type="file"
