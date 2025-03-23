@@ -6,6 +6,12 @@
 
   backdrop-filter: blur(2px); /* Blurs background */
   -webkit-backdrop-filter: blur(2px); /* Safari support */
+
+  &:focus {
+    outline: solid 2px var(--neutral-500);
+    outline-offset: 4px;
+  }
+
   input {
     position: absolute;
     top: 0;
