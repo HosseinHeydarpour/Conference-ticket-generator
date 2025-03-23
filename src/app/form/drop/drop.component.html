@@ -9,6 +9,7 @@
     (change)="onFileSelect($event)"
     (dragover)="onDragOver()"
     class="opacity-0 drop-zone__input"
+    accept="image/png, image/jpeg"
   />
   @if (!file) {
   <p>Drag and drop or click to upload</p>
@@ -26,5 +27,4 @@
     </button>
   </div>
   }
-  <p>Drag and drop or click to upload</p>
 </div>
