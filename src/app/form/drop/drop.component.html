@@ -10,5 +10,21 @@
     (dragover)="onDragOver()"
     class="opacity-0 drop-zone__input"
   />
+  @if (!file) {
+  <p>Drag and drop or click to upload</p>
+  } @else {
+  <div class="d-flex gap-2">
+    <button
+      class="drop-zone__btn drop-zone__btn--remove"
+      (click)="onRemoveImage()"
+      type="button"
+    >
+      Remove image
+    </button>
+    <button class="drop-zone__btn drop-zone__btn--change" type="button">
+      Change image
+    </button>
+  </div>
+  }
   <p>Drag and drop or click to upload</p>
 </div>

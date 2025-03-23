@@ -26,5 +26,38 @@
     padding: 8px;
     border-radius: 8px;
     margin-bottom: 20px;
+
+  &__btn {
+    background-color: var(--neutral-500-low-op);
+    border: none;
+    color: var(--neutral-300);
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 4px 6px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 90%;
+      height: 2px;
+      background-color: transparent;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 4px;
+      opacity: 0.3;
+      border-radius: 18px;
+      transition: all 0.3s;
+    }
+
+    &:hover,
+    &:focus {
+      &::after {
+        background-color: var(--neutral-300);
+        bottom: 4px;
+      }
+    }
   }
 }

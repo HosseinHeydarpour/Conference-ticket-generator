@@ -21,4 +21,9 @@ export class DropComponent {
   onDragOver() {
     console.log('Drag Over');
   }
+
+  onRemoveImage() {
+    this.imagePreview = null;
+    this.file = null;
+  }
 }
