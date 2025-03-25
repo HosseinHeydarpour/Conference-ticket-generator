@@ -12,4 +12,5 @@ export class ButtonComponent {
     required: true,
   })
   type!: 'button' | 'submit';
+  @Input() ifDisabled: boolean = false;
 }

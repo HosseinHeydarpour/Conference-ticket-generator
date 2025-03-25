@@ -11,4 +11,9 @@ button {
   border: none;
   display: block;
   font-weight: 500;
+  transition: all 0.3s ease-out;
+}
+
+button[disabled] {
+  cursor: not-allowed;
 }
