@@ -20,7 +20,7 @@ input {
   border: 1px solid var(--neutral-500);
   background-color: var(--neutral-700-low-op);
   border-radius: 8px;
-  color: var(--neutral-0);
+  color: var(--neutral-0) !important;
   padding: 10px 4px;
 
   &:focus {
