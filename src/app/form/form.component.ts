@@ -1,16 +1,21 @@
 import { Component, viewChild, ViewChild } from '@angular/core';
 import { ButtonComponent } from '../button/button.component';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
   standalone: true,
-  imports: [ButtonComponent, FormsModule],
+  imports: [ButtonComponent, ReactiveFormsModule],
   templateUrl: './form.component.html',
   styleUrl: './form.component.scss',
 })
 export class FormComponent {
-  private form = viewChild<NgForm>('form');
+  form = new FormGroup({
+    avatar: new FormControl(''),
+    name: new FormControl(''),
+    email: new FormControl(''),
+    github: new FormControl(''),
+  });
   file: File | null = null;
   imagePreview: string | null = null;
   draggedOver: boolean = false;
@@ -51,7 +56,6 @@ export class FormComponent {
     this.file = null;
   }
   onSubmit() {
-    console.log(this.form()?.form.value.email);
-    console.log('Submitted!');
+    console.log(this.form);
   }
 }
