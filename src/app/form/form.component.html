@@ -1,7 +1,50 @@
 <form class="form" (ngSubmit)="onSubmit()" #form="ngForm">
   <div class="form-group">
     <label class="mb-2">Upload Avatar</label>
-    <app-drop></app-drop>
+    <div
+      class="d-flex align-items-center justify-content-center h-100 drop-zone flex-column"
+      [class.focused]="draggedOver"
+    >
+      <div class="drop-zone__icon" [class.p-2]="!imagePreview">
+        @if (imagePreview) {
+        <img
+          [src]="imagePreview"
+          alt=""
+          class="w-100 img-fluid h-100 object-fit-cover"
+        />
+        } @else {
+        <img src="/images/icon-upload.svg" alt="" />
+        }
+      </div>
+      <input
+        type="file"
+        (change)="onFileSelect($event)"
+        (dragover)="onDragOver($event)"
+        (dragleave)="onDragLeave($event)"
+        class="opacity-0 drop-zone__input"
+        accept="image/png, image/jpeg"
+        ngModel
+        required
+        name="avatar"
+      />
+      @if (!file) {
+      <p>Drag and drop or click to upload</p>
+      } @else {
+      <div class="d-flex gap-2">
+        <button
+          class="drop-zone__btn drop-zone__btn--remove"
+          (click)="onRemoveImage()"
+          type="button"
+        >
+          Remove image
+        </button>
+        <button class="drop-zone__btn drop-zone__btn--change" type="button">
+          Change image
+        </button>
+      </div>
+      }
+    </div>
+
     <div class="d-flex gap-2 form__info align-items-center mt-3">
       <img src="/images/icon-info.svg" alt="Exclamation mark" />
       <p class="mb-0">Upload your photo (JPG or PNG, max size: 500KB)</p>
