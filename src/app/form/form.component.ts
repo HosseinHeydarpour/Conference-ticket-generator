@@ -1,4 +1,10 @@
-import { Component, ElementRef, viewChild, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  inject,
+  viewChild,
+  ViewChild,
+} from '@angular/core';
 import { ButtonComponent } from '../button/button.component';
 import {
   AbstractControl,
@@ -7,6 +13,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
+import { TicketService } from '../ticket/ticket.service';
 
 @Component({
   selector: 'app-form',
@@ -16,6 +23,8 @@ import {
   styleUrl: './form.component.scss',
 })
 export class FormComponent {
+  ticketService = inject(TicketService);
+
   form = new FormGroup({
     avatar: new FormControl('', {
       validators: [Validators.required],
@@ -90,7 +99,14 @@ export class FormComponent {
     this.fileInput.nativeElement.click();
   }
   onSubmit() {
-    console.log(this.form);
+    const user = {
+      avatar: this.form.controls.avatar.value as string,
+      name: this.form.controls.name.value as string,
+      email: this.form.controls.email.value as string,
+      github: this.form.controls.github.value as string,
+    };
+
+    this.ticketService.setUser(user);
   }
 
   // Form Validtors
