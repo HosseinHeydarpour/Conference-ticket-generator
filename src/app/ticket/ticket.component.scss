@@ -1,0 +1,54 @@
+.ticket {
+  z-index: 500;
+  position: relative;
+  overflow: hidden;
+
+  &__shape {
+    position: absolute;
+    z-index: -1;
+  }
+
+  &__heading {
+    color: var(--neutral-0);
+  }
+
+  &__date {
+    color: var(--neutral-500);
+    font-size: 0.875rem;
+  }
+
+  &__avatar {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 6px;
+
+    img {
+      width: 100%;
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__name {
+    color: var(--neutral-0);
+  }
+
+  &__github {
+    span {
+      color: var(--neutral-500);
+      font-size: 13px;
+    }
+  }
+
+  &__number {
+    color: var(--neutral-500);
+    position: absolute;
+    right: 15px;
+    top: 40%;
+    transform: translateY(-50%);
+    rotate: 90deg;
+    opacity: 0.7;
+    font-size: 24px;
+  }
+}

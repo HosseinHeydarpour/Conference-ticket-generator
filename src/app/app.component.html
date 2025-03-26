@@ -5,5 +5,9 @@
 <div class="container">
   <app-heading></app-heading>
 
+  @if(user()){
   <app-form></app-form>
+  } @else {
+  <app-ticket></app-ticket>
+  }
 </div>

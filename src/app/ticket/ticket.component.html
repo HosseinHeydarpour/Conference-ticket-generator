@@ -1,14 +1,27 @@
-<div class="ticket">
-  <div class="d-flex">
+<div class="ticket mt-5">
+  <img src="/images/pattern-ticket.svg" alt="" class="w-100 ticket__shape" />
+  <span class="ticket__number">#01609</span>
+  <div class="d-flex align-items-start gap-2 mb-4 mt-4 ms-3">
+    <img src="/images/logo-mark.svg" alt="Coding Conf" />
     <div class="d-flex flex-column">
-      <h3>Coding Conf</h3>
-      <span>Jan 31, 2025 / Austin, TX</span>
+      <h3 class="ticket__heading mb-1">Coding Conf</h3>
+      <span class="ticket__date">Jan 31, 2025 / Austin, TX</span>
     </div>
   </div>
-  <div class="d-flex">
+  <div class="d-flex gap-2 mb-4 ms-3">
+    <div class="ticket__avatar h-100">
+      <img
+        src="/images/image-avatar.jpg"
+        [alt]="user()?.name"
+        class="h-100 img-fluid"
+      />
+    </div>
     <div class="d-flex flex-column">
-      <h5>Johnatan Crsitoff</h5>
-      <span>Johnatan</span>
+      <h5 class="ticket__name">Johnattan Crsitoff</h5>
+      <div class="ticket__github d-flex">
+        <img src="/images/icon-github.svg" alt="" class="me-1" />
+        <span>jcristoph</span>
+      </div>
     </div>
   </div>
 </div>
