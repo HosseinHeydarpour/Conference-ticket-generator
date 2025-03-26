@@ -78,6 +78,7 @@ export class FormComponent {
   onRemoveImage() {
     this.imagePreview = null;
     this.file = null;
+    this.form.controls.avatar.reset();
   }
   onSubmit() {
     console.log(this.form);
