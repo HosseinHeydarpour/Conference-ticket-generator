@@ -11,20 +11,30 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 })
 export class FormComponent {
   form = new FormGroup({
-    avatar: new FormControl(''),
-    name: new FormControl(''),
-    email: new FormControl(''),
+    avatar: new FormControl('', {
+      validators: [Validators.required],
+    }),
     github: new FormControl(''),
   });
   file: File | null = null;
   imagePreview: string | null = null;
   draggedOver: boolean = false;
+  exceedsMaxSize: boolean = false;
 
   onFileSelect(e: Event | DragEvent) {
     const target = e.target as HTMLInputElement;
 
     if (target.files && target.files.length > 0) {
       this.file = target.files[0];
+
+      if (this.file.size > 524288) {
+        target.value = '';
+        this.file = null;
+        this.imagePreview = null;
+        this.exceedsMaxSize = true;
+        this.form.controls.avatar.reset();
+        return;
+      }
 
       const reader = new FileReader();
 
@@ -35,7 +45,7 @@ export class FormComponent {
       };
 
       reader.readAsDataURL(this.file);
-
+      this.exceedsMaxSize = false;
       // Reset the file input to allow selecting the same file again
       target.value = '';
     }
