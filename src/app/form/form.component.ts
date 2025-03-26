@@ -100,7 +100,7 @@ export class FormComponent {
   }
   onSubmit() {
     const user = {
-      avatar: this.form.controls.avatar.value as string,
+      avatar: this.imagePreview as string,
       name: this.form.controls.name.value as string,
       email: this.form.controls.email.value as string,
       github: this.form.controls.github.value as string,
