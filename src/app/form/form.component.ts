@@ -30,6 +30,9 @@ export class FormComponent {
       validators: [Validators.required],
     }),
   });
+
+  // Drop Zone Logic
+
   file: File | null = null;
   imagePreview: string | null = null;
   draggedOver: boolean = false;
@@ -88,5 +91,31 @@ export class FormComponent {
   }
   onSubmit() {
     console.log(this.form);
+  }
+
+  // Form Validtors
+
+  get nameIsInvalid() {
+    return (
+      this.form.controls.name.invalid &&
+      this.form.controls.name.touched &&
+      this.form.controls.name.dirty
+    );
+  }
+
+  get emailIsInvalid() {
+    return (
+      this.form.controls.email.invalid &&
+      this.form.controls.email.touched &&
+      this.form.controls.email.dirty
+    );
+  }
+
+  get githubIsInvalid() {
+    return (
+      this.form.controls.github.invalid &&
+      this.form.controls.github.touched &&
+      this.form.controls.github.dirty
+    );
   }
 }
