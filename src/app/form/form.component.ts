@@ -1,6 +1,12 @@
 import { Component, viewChild, ViewChild } from '@angular/core';
 import { ButtonComponent } from '../button/button.component';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import {
+  AbstractControl,
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -14,7 +20,15 @@ export class FormComponent {
     avatar: new FormControl('', {
       validators: [Validators.required],
     }),
-    github: new FormControl(''),
+    name: new FormControl('', {
+      validators: [Validators.required],
+    }),
+    email: new FormControl('', {
+      validators: [Validators.required, Validators.email],
+    }),
+    github: new FormControl('', {
+      validators: [Validators.required],
+    }),
   });
   file: File | null = null;
   imagePreview: string | null = null;
