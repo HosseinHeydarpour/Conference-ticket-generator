@@ -44,8 +44,16 @@
     </div>
 
     <div class="d-flex gap-2 form__info align-items-center mt-3">
+      @if(exceedsMaxSize){
+      <img src="/images/icon-error.svg" alt="Exclamation mark" />
+
+      <p class="mb-0 error-label">
+        Too large. Please upload a photo under 500KB.
+      </p>
+      } @else {
       <img src="/images/icon-info.svg" alt="Exclamation mark" />
       <p class="mb-0">Upload your photo (JPG or PNG, max size: 500KB)</p>
+      }
     </div>
   </div>
   <div class="form-group mt-3 mb-3">
