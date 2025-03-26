@@ -1,19 +1,14 @@
-import { Injectable } from '@angular/core';
+import { Injectable, signal } from '@angular/core';
 import { User } from '../user.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TicketService {
-  user: User | undefined;
+  user = signal<User | undefined>(undefined);
   constructor() {}
 
   setUser(userData: User) {
-    this.user = userData;
-  }
-
-  getuser() {
-    if (!this.user) return;
-    return this.user;
+    this.user.set(userData);
   }
 }
