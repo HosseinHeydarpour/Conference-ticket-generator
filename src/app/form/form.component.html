@@ -24,6 +24,7 @@
         class="opacity-0 drop-zone__input"
         accept="image/png, image/jpeg"
         [formControl]="form.controls.avatar"
+        #fileInput
       />
       @if (!file) {
       <p>Drag and drop or click to upload</p>
@@ -36,7 +37,7 @@
         >
           Remove image
         </button>
-        <button class="drop-zone__btn drop-zone__btn--change" type="button">
+        <button class="drop-zone__btn drop-zone__btn--change" type="button" (click)="onChangeImage()">
           Change image
         </button>
       </div>

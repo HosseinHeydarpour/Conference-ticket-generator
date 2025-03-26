@@ -1,4 +1,4 @@
-import { Component, viewChild, ViewChild } from '@angular/core';
+import { Component, ElementRef, viewChild, ViewChild } from '@angular/core';
 import { ButtonComponent } from '../button/button.component';
 import {
   AbstractControl,
@@ -34,6 +34,8 @@ export class FormComponent {
   imagePreview: string | null = null;
   draggedOver: boolean = false;
   exceedsMaxSize: boolean = false;
+
+  @ViewChild('fileInput') fileInput!: ElementRef<HTMLInputElement>;
 
   onFileSelect(e: Event | DragEvent) {
     const target = e.target as HTMLInputElement;
@@ -79,6 +81,10 @@ export class FormComponent {
     this.imagePreview = null;
     this.file = null;
     this.form.controls.avatar.reset();
+  }
+
+  onChangeImage() {
+    this.fileInput.nativeElement.click();
   }
   onSubmit() {
     console.log(this.form);
