@@ -1,10 +1,11 @@
 import { Component, inject, signal } from '@angular/core';
 import { TicketService } from './ticket.service';
+import { UsernamePipe } from '../username.pipe';
 
 @Component({
   selector: 'app-ticket',
   standalone: true,
-  imports: [],
+  imports: [UsernamePipe],
   templateUrl: './ticket.component.html',
   styleUrl: './ticket.component.scss',
 })

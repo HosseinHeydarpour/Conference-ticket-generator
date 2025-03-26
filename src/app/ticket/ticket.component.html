@@ -11,16 +11,16 @@
   <div class="d-flex gap-3 mb-4 ms-3">
     <div class="ticket__avatar h-100">
       <img
-        src="/images/image-avatar.jpg"
+        [src]="user()?.avatar"
         [alt]="user()?.name"
         class="h-100 img-fluid"
       />
     </div>
     <div class="d-flex flex-column gap-0">
-      <h5 class="ticket__name mb-1">Johnattan Crsitoff</h5>
+      <h5 class="ticket__name mb-1">{{ user()?.name }}</h5>
       <div class="ticket__github d-flex">
         <img src="/images/icon-github.svg" alt="" class="me-1" />
-        <span>jcristoph</span>
+        <span>{{ user()?.github | username }} </span>
       </div>
     </div>
   </div>
