@@ -15,4 +15,8 @@ export class TicketComponent {
   user = this.ticketService.user.asReadonly();
 
   constructor() {}
+
+  get randomNumber() {
+    return String(Math.floor(Math.random() * 100000)).padStart(5, '0');
+  }
 }
