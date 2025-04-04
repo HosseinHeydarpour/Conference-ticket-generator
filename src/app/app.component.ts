@@ -3,8 +3,6 @@ import { RouterOutlet } from '@angular/router';
 import { HeadingComponent } from './heading/heading.component';
 import { FormComponent } from './form/form.component';
 import { TicketService } from './ticket/ticket.service';
-import { User } from './user.model';
-import { tick } from '@angular/core/testing';
 import { TicketComponent } from './ticket/ticket.component';
 
 @Component({
