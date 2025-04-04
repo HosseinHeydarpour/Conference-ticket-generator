@@ -67,6 +67,15 @@ body {
   position: relative;
   min-height: 100dvh;
   overflow-x: hidden;
+
+  @media only screen and (min-width: 36rem) {
+    background: url("../public/images/background-tablet.png") center center
+      no-repeat;
+  }
+  @media only screen and (min-width: 62rem) {
+    background: url("../public/images/background-desktop.png") center center
+      no-repeat;
+  }
 }
 
 .shape-1 {
