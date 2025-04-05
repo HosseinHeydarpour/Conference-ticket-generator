@@ -1,4 +1,13 @@
 .ticket {
+  flex: 1;
+
+  &__container {
+    position: relative;
+    min-height: 18.75rem;
+    display: flex;
+    align-items: center;
+  }
+
   z-index: 500;
   position: relative;
   overflow: hidden;
