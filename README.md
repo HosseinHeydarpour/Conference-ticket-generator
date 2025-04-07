@@ -69,5 +69,5 @@ Looking ahead, I plan to replace Bootstrap with Tailwind CSS for greater flexibi
 ## Author
 
 - My Linkedin - [Hossein Heydarpour - Linkedin](https://www.linkedin.com/in/hosseinheydarpour)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/HosseinHeydarpour)
-- My X - [@Htechdaily](https://www.twitter.com/Htechdaily)
+- Frontend Mentor - [@HosseinHeydarpour](https://www.frontendmentor.io/profile/HosseinHeydarpour)
+- My X - [@Htechdaily](https://www.x.com/Htechdaily)
