@@ -67,6 +67,7 @@ body {
   position: relative;
   min-height: 100dvh;
   overflow-x: hidden;
+  background-size: cover;
 
   @media only screen and (min-width: 36rem) {
     background: url("../public/images/background-tablet.png") center center
@@ -139,13 +140,24 @@ body {
 .shape-4 {
   background: url("../public/images/pattern-circle.svg");
   position: absolute;
-  top: 53%;
-  left: 50%;
-  width: 250px;
-  height: 250px;
+  top: 50%;
+  left: 60px;
+  width: 80px;
+  height: 80px;
   background-position: center;
   background-repeat: no-repeat;
   transform: translateX(200px);
+  @media only screen and (min-width: 62rem) {
+    background: url("../public/images/pattern-circle.svg");
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    width: 250px;
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    transform: translateX(200px);
+  }
 }
 
 // Utils
