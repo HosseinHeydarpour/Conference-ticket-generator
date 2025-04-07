@@ -1,27 +1,70 @@
-# ConferenceTciketGenerator
+# Frontend Mentor - Conference ticket generator solution
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.4.
+This is a solution to the [Conference ticket generator challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/conference-ticket-generator-oq5gFIU12w). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Development server
+## Table of contents
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-## Code scaffolding
+## Overview
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+I took on this challenge as an opportunity to sharpen my Angular skills. While using a full-fledged framework like Angular might seem like overkill for a small project, I believe it's a valuable way to practice and reinforce key concepts. In this project, I specifically focused on implementing Angular Reactive Forms to handle form logic more efficiently and cleanly.
 
-## Build
+### The challenge
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Users should be able to:
 
-## Running unit tests
+- Complete the form with their details
+- Receive form validation messages if:
+  - Any field is missed
+  - The email address is not formatted correctly
+  - The avatar upload is too big or the wrong image format
+- Complete the form only using their keyboard
+- Have inputs, form field hints, and error messages announced on their screen reader
+- See the generated conference ticket when they successfully submit the form
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Screenshot
 
-## Running end-to-end tests
+![](./public/screenshot-desktop.jpg)
+![](./public/screenshot-mobile.jpg)
+![](./public/screenshot-ticket-desktop.jpg)
+![](./public/screenshot-ticket-mobile.jpg)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Links
 
-## Further help
+- Solution URL: [Add solution URL here](https://github.com/HosseinHeydarpour/Conference-ticket-generator)
+- Live Site URL: [Add live site URL here](https://conference-ticket-generator-tawny.vercel.app/)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### Built with
+
+- Semantic HTML5 markup
+- Bootstrap 5
+- Flexbox
+- Mobile-first workflow
+- [Angular](https://angular.dev/) - JS Framework
+
+### What I learned
+
+The core challenge in this project was implementing a drag-and-drop file upload (dropzone) with file size validation. Another key aspect was managing the flow of data between steps—specifically, passing the uploaded file data to the second step, which displays the generated ticket. I handled this by leveraging an Angular service to maintain and share the state across components.
+
+### Continued development
+
+Looking ahead, I plan to replace Bootstrap with Tailwind CSS for greater flexibility and modern styling. I'm also aiming to incorporate testing into my workflow and start practicing Test-Driven Development (TDD) to write more reliable and maintainable code.
+
+## Author
+
+- My Linkedin - [Hossein Heydarpour - Linkedin](https://www.linkedin.com/in/hosseinheydarpour)
+- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/HosseinHeydarpour)
+- My X - [@Htechdaily](https://www.twitter.com/Htechdaily)
