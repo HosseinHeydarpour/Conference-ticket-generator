@@ -14,13 +14,15 @@
     <span>{{ lastName }}</span
     >! Your ticket is ready.
   </h1>
-  <p>
+  <p class="mb-5 mb-lg-2">
     We've emailed your ticket to
     <span>{{ user()?.email }}</span> and will send updates in the run up to the
     event
   </p>
   } @else {
   <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
-  <p class="greeting">Secure your spot at next year's biggest coding conference</p>
+  <p class="greeting">
+    Secure your spot at next year's biggest coding conference
+  </p>
   }
 </section>
