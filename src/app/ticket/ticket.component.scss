@@ -3,9 +3,11 @@
 
   &__container {
     position: relative;
-    min-height: 18.75rem;
+    min-height: auto;
+    max-width: 23rem;
     display: flex;
     align-items: center;
+    margin: 0 auto;
   }
 
   z-index: 500;
