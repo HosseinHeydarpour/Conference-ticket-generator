@@ -75,6 +75,10 @@ body {
   @media only screen and (min-width: 62rem) {
     background: url("../public/images/background-desktop.png") center center
       no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -101,6 +105,14 @@ body {
 
   background-size: cover;
   background-repeat: no-repeat;
+
+  @media only screen and (min-width: 62rem) {
+    background: url("../public/images/pattern-squiggly-line-bottom-desktop.svg")
+      center center no-repeat;
+
+    height: 398px;
+    width: 700px;
+  }
 }
 
 .shape-3 {
@@ -113,6 +125,14 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media only screen and (min-width: 62rem) {
+    height: 200px;
+    width: 286px;
+
+    top: 80px;
+    right: 0;
+  }
 }
 
 // Utils
