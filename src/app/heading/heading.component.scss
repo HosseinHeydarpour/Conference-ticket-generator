@@ -10,14 +10,30 @@
 
   h1 {
     color: var(--neutral-0);
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     text-align: center;
+
+    span {
+      background: #f37362;
+      background: linear-gradient(to right, #f37362 0%, #ffffff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      &:first-child {
+        margin-right: 0.5rem;
+      }
+    }
   }
 
   p {
     color: var(--neutral-300);
     text-align: center;
     font-size: 1rem;
+
+    span {
+      color: var(--orange-700);
+    }
   }
 
   &__logo {
