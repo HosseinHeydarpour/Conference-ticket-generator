@@ -11,4 +11,8 @@ export class TicketService {
   setUser(userData: User) {
     this.user.set(userData);
   }
+
+  get userInfo() {
+    return this.user;
+  }
 }
