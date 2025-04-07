@@ -38,14 +38,17 @@ Users should be able to:
 ### Screenshot
 
 ![](./public/screenshot-desktop.jpg)
+
 ![](./public/screenshot-mobile.jpg)
+
 ![](./public/screenshot-ticket-desktop.jpg)
+
 ![](./public/screenshot-ticket-mobile.jpg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/HosseinHeydarpour/Conference-ticket-generator)
-- Live Site URL: [Add live site URL here](https://conference-ticket-generator-tawny.vercel.app/)
+- Solution URL: [Solution](https://github.com/HosseinHeydarpour/Conference-ticket-generator)
+- Live Site URL: [Live(Vercel)](https://conference-ticket-generator-tawny.vercel.app/)
 
 ### Built with
 
